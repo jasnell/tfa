@@ -1,6 +1,6 @@
 {
   "name": "tfa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a two-factor auth client",
   "main": "app.js",
   "author": "James M Snell <jasnell@gmail.com>",

@@ -3,13 +3,13 @@
 -----BEGIN PGP SIGNATURE-----
 Comment: GPGTools - https://gpgtools.org
 
-iQEcBAABCgAGBQJV1XqlAAoJEHNBsVwHCHesEMQH/2plQ/c3s9ZxajwXVvgjt6rC
-ZNVsJ0DzDe2icyaJowaKLmPDXPkg+SiXuj3Xzx5GCp0LlIvTmapyyfQGMedjxtjc
-ODAJ16lnyMwE7EbjommLZZjd/1B6XgvQFtGN2E1DRCiLFzN4teBQwZqO7Asxy66A
-Cu6YxigV74Ex/dzeHDddRlGw2kkhkvpvo0FV8Yx3pwSrqL57VHSZ6pnXHfZCRsdt
-lMB5zxIv1l/lvinaWEkSGVLlWNxs8ICCflvIHrsOzRbfBZs0oixT3ILQ1UIdNavN
-dP2Je5xU9/DZXpkk4MP3U1/W+nhl6Uhjmd7wKZjGtrCH4ceI6PQoYG3gcd7DK0o=
-=ZQ2Q
+iQEcBAABCgAGBQJV1XzlAAoJEHNBsVwHCHesSLsH/2Yq6mFBv+XqaxGtpXFWTYX8
+R2RxfSU5uUEY3VR+v8MwrunZsZmR9jFOjKAoBMz732HUKkhfT97LdTKb85UAK/ZJ
+KztikWeVk63J8MFqfcG1pLVTYZfsQ0a1kRwZ13McfuNgS9eCppT/jR2GILk/dpl0
+sPbe+lDHz8LqK7HzWQDHxioEIM/phqn30I0ZEI1ntdXbEjdq0yXdyQi/D9qj1Dji
+K4OoJaOODQHnOjSTe7yKa/TVBJR63Ub4vo1GFEJdi5FNyEkItZveGEjweEeZ9Iuh
+QjOgYy45PfvLxRLjFnMM1jwKLP48B0C8GEAu0XMfl09693qV29OCuv5f1YImfIo=
+=/W0B
 -----END PGP SIGNATURE-----
 
 ```
@@ -29,8 +29,8 @@ size   exec  file            contents
 1193           enroll.js     350f7d9e05e9ec819e1b0be497826847ad6490f492e68fd897a7cd3c9ac2c471
 1274           generate.js   320bf09330671b30aad770c773e9223f13616bf37d10da979c2c6b3571fc1dea
 11310          LICENSE       30a2c00ed23f06add36f69a8fbdd8c946380b76dba24deaf9101e45123ab5b9f
-767            package.json  afa5fdd00c25a994fdf936db12299b0d635b70c2889171b3ca721dd002f65a45
-1597           qrenroll.js   2d05bf0107cc453b8b76716bf14a47a05dcd5b650c78dbdb0ceaf5aef0f2d59a
+767            package.json  b08014902f270c9be6ee941057480a5edbb573dfaf3da7a759c5888c47b6d4dc
+1748           qrenroll.js   cfdf7bdc2704f5a981713ac30b6363afdcf396d37cff7acd3ed53ff88b3b891a
 2087           README.md     6ae2db7c6506713a0fba2e8f73d57b65171ece9076f65d06f9a68afb66778bcd
 ```
 

@@ -17,10 +17,15 @@ if (has) {
   const url = require('url');
   const qs = require('querystring');
   const en = require('./enroll');
+  const fs = require('fs');
 
   function enroll(arg, options) {
     setImmediate(function() {
-      var qr_path = path.resolve(__dirname, arg);
+      var qr_path = path.resolve(process.cwd(), arg);
+      if (!fs.existsSync(qr_path)) {
+        console.log('cannot read QRCode image');
+        process.exit(1);
+      }
       var image = new Image();
       image.onload = function() {
         var result;
