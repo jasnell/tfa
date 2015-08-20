@@ -1,0 +1,37 @@
+{
+  "name": "tfa",
+  "version": "1.0.0",
+  "description": "a two-factor auth client",
+  "main": "app.js",
+  "author": "James M Snell <jasnell@gmail.com>",
+  "maintainers": [
+    "James M Snell <jasnell@us.ibm.com> (http://jasnell.me)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasnell/tfa"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "commander": "^2.8.1",
+    "configstore": "^1.2.1",
+    "passcode": "^1.0.2"
+  },
+  "optionalDependencies": {
+    "canvas": "^1.2.7",
+    "jsqrcode": "0.0.6"
+  },
+  "bin": {
+    "tfa": "./app.js"
+  },
+  "preferGlobal": true
+}
