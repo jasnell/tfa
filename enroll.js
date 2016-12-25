@@ -1,47 +1,42 @@
+'use strict';
 const Configstore = require('configstore');
 const pkg = require('./package.json');
 
 const conf = new Configstore(pkg.name, {});
 
-function doEnroll(label, secret, options, callback) {
-  setImmediate(function() {
-    options = options || {};
-    try {
-      var value = {secret:secret};
-      Object.keys(options).forEach(function(key) {
-        value[key] = options[key];
-      });
-      conf.set(label, value);
-      callback();
-    } catch (err) {
-      callback(err);
-    }
-  });
+function doEnroll(label, secret, options) {
+  options = options || {};
+  if (typeof options !== 'object')
+    throw new TypeError('options must be an object');
+
+  var value = {secret:secret};
+  var keys = Object.keys(options);
+  for (var n = 0; n < keys.length; n++) {
+    value[keys[n]] = options[key];
+  }
+  conf.set(label, value);
 }
 
 function enroll(env, options) {
-  if (!env.secret)
-    console.log('cannot enroll without a secret');
-  if (!env.label)
-    console.log('cannot enroll without a label');
+  if (!env.secret) {
+    console.error('cannot enroll without a secret');
+    process.exit(-1);
+  }
+  if (!env.label) {
+    console.error('cannot enroll without a label');
+    process.exit(-1);
+  }
   var options = {};
   if (env.algorithm)
     options.algorithm = env.algorithm;
   if (env.encoding)
     options.encoding = env.encoding;
-  var digits = parseInt(env.digits);
+  var digits = env.digits | 0;
   if (digits)
-    options.digits = parseInt(digits);
+    options.digits = digits;
   if (env.issuer)
     options.issuer = env.issuer;
-  doEnroll(env.label, env.secret, options, function(err) {
-    if (err) {
-      console.log('could not enroll');
-      process.exit(1);
-    }
-    console.log('enrolled!');
-    process.exit(0);
-  });
+  doEnroll(env.label, env.secret, options);
 }
 module.exports = enroll;
 module.exports.enroll = doEnroll;

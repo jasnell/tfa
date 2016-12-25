@@ -1,3 +1,4 @@
+'use strict';
 const Configstore = require('configstore');
 const pkg = require('./package.json');
 const passcode = require('passcode');
@@ -30,28 +31,27 @@ function generate(arg, options) {
   var nolabel = options.nolabel;
   if (arg) doGenerate(arg, nolabel);
   else {
-    Object.keys(conf.all).forEach(function(item) {
-      doGenerate(item,nolabel);
-    });
+    var keys = Object.keys(conf.all);
+    for (var n = 0; n < keys.length; n++) {
+      doGenerate(keys[n],nolabel);
+    };
   }
-  process.exit(0);
 }
 
 generate.list = function(arg, options) {
-  Object.keys(conf.all).forEach(function(item) {
-    console.log(item);
-  });
-  process.exit(0);
+  var keys = Object.keys(conf.all);
+  for (var n = 0; n < keys.length; n++) {
+    console.log(keys[n]);
+  };
 };
 
 generate.delete = function(arg, options) {
   if (!arg) {
-    console.log('no label provided');
-    process.exit(1);
+    console.error('no label provided');
+    process.exit(-1);
   }
   conf.del(arg);
   console.log('deleted!');
-  process.exit(0);
 };
 
 module.exports = generate;

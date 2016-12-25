@@ -1,6 +1,6 @@
 {
   "name": "tfa",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "a two-factor auth client",
   "main": "app.js",
   "author": "James M Snell <jasnell@gmail.com>",
@@ -23,7 +23,7 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "commander": "^2.8.1",
-    "configstore": "^1.2.1",
+    "configstore": "^2.1.0",
     "passcode": "^1.0.2"
   },
   "optionalDependencies": {
