@@ -5,7 +5,7 @@ const qrenroll = require('./qrenroll');
 const enroll = require('./enroll');
 const generate = require('./generate');
 
-app.version('2.0.0');
+app.version('2.1.0');
 
 if (qrenroll.has_jsqrcode) {
   app.command('enroll-qrcode <qrcode>')
@@ -46,5 +46,6 @@ app.command('delete')
 
 app.parse(process.argv);
 
-if (!process.argv.slice(2).length)
-  app.outputHelp();
+if (!process.argv.slice(2).length) {
+  generate(null, true)
+}
