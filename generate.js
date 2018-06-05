@@ -4,6 +4,7 @@ const pkg = require('./package.json');
 const passcode = require('passcode');
 const util = require('util');
 const chalk = require('chalk');
+const clipb = require('clipboardy');
 
 const conf = new Configstore(pkg.name, {})
 
@@ -17,13 +18,27 @@ function doGenerate(label, nolabel) {
     algorithm: value.algorithm || 'sha1',
     step: value.step || 30
   });
+
+  clipb.writeSync(token);
+
   if (!nolabel) {
-    console.log(util.format(
-      '%s : %s',
-      chalk.cyan(label),
-      chalk.bold.green(token)));
+    console.log(
+      '\n',
+      util.format(
+        '%s: %s %s',
+        chalk.cyan(label),
+        chalk.bold.green(token),
+        chalk.gray(' [copied to clipboard]')
+      ),
+      '\n'
+    );
   } else {
-    console.log(token);
+    console.log(
+      '\n',
+      token,
+      chalk.gray(' [copied to clipboard]'),
+      '\n'
+    );
   }
 }
 
